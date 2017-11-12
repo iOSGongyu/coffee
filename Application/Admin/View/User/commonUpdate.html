@@ -1,0 +1,207 @@
+<include file="Public:head"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <include file="Public:sidebar"/>
+
+        <div class="main-content">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+                </script>
+
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Tables</a>
+                    </li>
+                    <li class="active">Simple &amp; Dynamic</li>
+                </ul><!-- .breadcrumb -->
+
+                <div class="nav-search" id="nav-search">
+                    <form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+                    </form>
+                </div><!-- #nav-search -->
+            </div>
+
+            <div class="page-content">
+                <div class="page-header">
+                    <h1>
+                        普通用户管理
+                        <small>
+                            <i class="icon-double-angle-right"></i>
+                            修改用户
+                        </small>
+                    </h1>
+                </div><!-- /.page-header -->
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form class="form-horizontal" role="form">
+                            <foreach name="userDetail" item="row2">
+                                <div class="form-group">
+                                    <input type="hidden" value="{$row2.id}" id="userid">
+                                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right">用户名： </label>
+                                    <div class="col-sm-4">
+                                        <input type="text" value="{$row2.account}" id="account">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right">昵称： </label>
+                                    <div class="col-sm-4">
+                                        <input type="text" value="{$row2.username}" id="username">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">性别： </label>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" class="ace" value="1" name="sex" <if condition="$row2.sex == 1">checked</if>>
+                                            <span class="lbl">男</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" class="ace" value="0" name="sex" <if condition="$row2.sex == 0">checked</if>>
+                                            <span class="lbl">女</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right">电话： </label>
+                                    <div class="col-sm-4">
+                                        <input type="text" value="{$row2.telephone}" id="telephone">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right">邮箱： </label>
+                                    <div class="col-sm-4">
+                                        <input type="text" value="{$row2.email}" id="email">
+                                    </div>
+                                </div>
+                                <!--<div class="form-group">-->
+                                    <!--<label for="form-field-1" class="col-sm-3 control-label no-padding-right">地区： </label>-->
+                                    <!--<div class="col-sm-4">-->
+                                        <!--<input type="text" value="{$row2.location}" id="location">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <div class="form-group">
+                                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right">积分： </label>
+                                    <div class="col-sm-4">
+                                        <input type="text" value="{$row2.score}" id="score">
+                                    </div>
+                                </div>
+                                <div class="clearfix form-actions">
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button type="button" class="btn btn-info" onclick="userUpdate();">
+                                            <i class="icon-ok bigger-110"></i>
+                                            确定
+                                        </button>
+                                        &nbsp; &nbsp; &nbsp;
+                                        <button type="reset" class="btn">
+                                            <i class="icon-undo bigger-110"></i>
+                                            重置
+                                        </button>
+                                    </div>
+                                </div>
+                            </foreach>
+                        </form>
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div><!-- /.main-content -->
+
+        <div class="ace-settings-container" id="ace-settings-container">
+            <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+                <i class="icon-cog bigger-150"></i>
+            </div>
+
+            <div class="ace-settings-box" id="ace-settings-box">
+                <div>
+                    <div class="pull-left">
+                        <select id="skin-colorpicker" class="hide">
+                            <option data-skin="default" value="#438EB9">#438EB9</option>
+                            <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+                            <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+                            <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+                        </select>
+                    </div>
+                    <span>&nbsp; Choose Skin</span>
+                </div>
+
+                <div>
+                    <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+                    <label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+                    <label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+                    <label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+                    <label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
+                    <label class="lbl" for="ace-settings-add-container">
+                        Inside
+                        <b>.container</b>
+                    </label>
+                </div>
+            </div>
+        </div><!-- /#ace-settings-container -->
+    </div><!-- /.main-container-inner -->
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+</div><!-- /.main-container -->
+
+<!-- basic scripts -->
+
+<include file="Public:foot" />
+<script>
+    function userUpdate(){
+        var userid=$('#userid').val();
+        var account=$('#account').val();
+        var username=$('#username').val();
+        var sex = $('input[name="sex"]:checked ').val();
+        var telephone=$('#telephone').val();
+        var email=$('#email').val();
+        var score=$('#score').val();
+
+        var data = {"userid":userid,"account":account,"username":username,"sex":sex,"telephone":telephone,"email":email,"score":score};
+        $.get('__APP__/Admin/Ajax/userUpdate',data,function(rs){
+            if(rs==1){
+                alert('修改成功');
+                location.href='../User/commonUserList';
+            }else{
+                alert('系统错误，请联系管理员');
+            }
+
+        });
+
+    }
+</script>

@@ -1,0 +1,92 @@
+<include file="Public:head" />
+<div class="center_top_bg orders">
+    <div class="center_top clearboth">
+        <div class="header img_room">
+            <span></span>
+            <foreach name="headimg" item="row">
+                <img  <if condition="$row.headimg == ''"><if condition="$row.mobileheadimg == ''">src="{$url_ali}images/login/header.jpg"<else/> src="{$url_mobile}__PUBLIC__/Uploads/{$row.mobileheadimg}" </if><else/> src="__PUBLIC__/Uploads/{$row.headimg}" </if> style="width: 200px" height="200px"/>
+            </foreach>
+        </div>
+        <em class="name">{$_COOKIE['commonAccount']}</em>
+    </div>
+</div>
+<div class="center_content clearboth">
+    <div class="left">
+        <strong class="center_title">订单中心</strong>
+        <div class="center_menu">
+            <a href="/order/submitOrderType" class="menu_item">提交订单</a>
+            <a href="/order/index" class="menu_item cur">查看订单</a>
+        </div>
+    </div>
+
+
+    <form name=alipayment action='' method=post target="_blank">
+
+        <foreach name="userOrder" item="row">
+    <div class="right order_right prize_right">
+        <strong class="user_title">确认订单</strong>
+
+        <table cellspacing="0" cellpadding="0" class="submit_table">
+            <tr>
+                <th>订单号：</th>
+                <td><input class="order_txt"  name="WIDout_trade_no" value="{$row.orderno}" readonly /></td>
+            </tr>
+            <tr>
+                <th>订单名称：</th>
+                <td><input class="order_txt" name="WIDsubject" value="{$row.ordername}"  readonly/></td>
+            </tr>
+            <tr>
+                <th>价格：</th>
+                <td><foreach name="price" item="row2">
+                    <input class="order_txt" name="WIDtotal_fee" value="{$row2.price}" readonly />
+                </foreach></td>
+            </tr>
+               <input type="hidden" class="order_txt" name="WIDshow_url" value="http://www.maiclub.cn/" readonly/>
+            <tr>
+                <th>备注：</th>
+                <td><input class="order_txta" name="WIDbody" value="{$row.remark}" readonly/></td>
+            </tr>
+
+        </table>
+        <div class="message_item" style=";margin-left:30px;">
+            <th ><em class="type">支付方式：</em></th>
+            <input type="radio" class="message_rd" value="1" id="rd1" name="rd1" checked="checked" />
+            <label class="message_lab" for="rd1"><img src="{$url_ali}images/orders/alipay.png" width="30px" height="30px"></label>
+            <input type="radio" class="message_rd" value="0" id="rd2" name="rd1"  />
+            <label class="message_lab" for="rd2"><img src="{$url_ali}images/orders/wechat.png" width="30px" height="30px"></label>
+        </div>
+        <p class="next_box" style="text-align:center;margin-top:30px;">
+            <input type="submit" class="order_next submit"  id="sure" value="确 认"/>
+        </p>
+    </div>
+        </foreach>
+    </form>
+</div>
+
+<include file="Public:foot" />
+<script>
+    $(function () {
+        $(".checkbox").click(function () {
+            if ($(this).parent().hasClass("sel")) {
+                $(this).parent().removeClass("sel");
+            } else {
+                $(this).parent().addClass("sel").siblings().removeClass("sel");
+                $(".order_next").removeClass("noclick");
+            }
+        })
+    })
+</script>
+        <script>
+            $(function(){
+                $("#sure").click(function(){
+//                    alert("aaaa");
+                   var rd= $('input:radio:checked').val();
+//                    alert(rd);
+                    if(rd==1){
+                        $('form').attr('action','/Home/Alipay/doalipay');
+                    }else{
+                        $('form').attr('action','/wxpay/maiclub/jsapi.php');
+                    }
+                })
+            })
+        </script>

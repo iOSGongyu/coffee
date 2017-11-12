@@ -1,0 +1,84 @@
+<include file="Public:head" />
+<div class="help_top_bg">
+    <div class="help_top">
+        <a href="#"><img class="logo" src="{$url_ali}images/index/logo.png" /></a>
+        <em><i>></i> <span>MAI联盟</span></em>
+    </div>
+</div>
+<div class="alliance_banner_bg">
+    <div class="alliance_banner">
+        <img src="{$url_ali}images/about/alliance_banner.jpg" />
+    </div>
+</div>
+<div class="alliance_cont clearboth">
+    <div class="gray_box">
+        <div class="alliance_title title_1">
+            <strong>MAI优势</strong>
+            <em>DOMINTANT</em>
+        </div>
+    </div>
+    <div class="white_box">
+        <div class="alliance_item">
+            <img src="{$url_ali}images/about/alliance_icon1.png" />
+            <p>
+                优质的广告资源<br />
+                拥有众多实力广告主，轻松将流量<br />
+                转换为现金。网络媒介资源丰富，<br />
+                将广告进行高性价比的投放，使网<br />
+                络广告效果发挥到极致。
+            </p>
+        </div>
+        <div class="alliance_item">
+            <img src="{$url_ali}images/about/alliance_icon2.png" />
+            <p>
+                低廉的广告费用<br />
+                花费比传统广告低廉数倍的费用，<br />
+                收获比传统广告多数倍的效果；<br />
+                全民式资源，迅速帮助企业提升<br />
+                访问量和品牌知名度。
+            </p>
+        </div>
+        <div class="alliance_item">
+            <img src="{$url_ali}images/about/alliance_icon3.png" />
+            <p>
+                精准的营销投放<br />
+                把握每一分钱的效益：<br />
+                按照地域、时间等多种定向方式<br />
+                投放广告，实现广告精准投放，<br />
+                力度精确到每天、每小时。
+            </p>
+        </div>
+    </div>
+    <div class="gray_box">
+        <div class="alliance_title title_2">
+            <strong>成功案例</strong>
+            <em>OUR CASES</em>
+        </div>
+        <div class="alliance_text">
+            <strong>MAI 凝聚现代智慧</strong>
+            <p>
+                麦联盟依托于麦粉吧大数据的力量，提供最具竞争力的各类行业专业服务。这一应用将打通各行各业和互联网的边界，<br />
+                激活一个巨大的“粉丝经济”市场。麦联盟致力于与各联盟成员一起创造互惠互利的双赢局面的广告联盟平台，让赚钱不再困难。
+            </p>
+        </div>
+    </div>
+    <div class="poolgray_box">
+        <div class="partner_list">
+            <div class="partner_room clearboth">
+                <foreach name="brandList" item="row">
+                <span class="partner_item">{$row.brandname}</span>
+                </foreach>
+            </div>
+        </div>
+    </div>
+    <div class="white_box">
+        <img class="contact_text" src="{$url_ali}images/about/contact_img.png" />
+        <div class="phone_box">13044194624</div>
+    </div>
+</div>
+<include file="Public:foot" />
+<script>
+    $(function(){
+        $("body").css("background","#fff");
+    })
+</script>

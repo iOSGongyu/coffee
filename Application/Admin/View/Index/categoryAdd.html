@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+    <load href="/Public/admin/css/style.css" />
+    <load href="/Public/admin/js/jquery.js" />
+</head>
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li>分类管理</li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    <div class="formtitle"><span>基本信息</span></div>
+    
+    <ul class="forminfo">
+    <li>上级目录
+      <select id="ParentId" class="dfinput">
+        <option value="0" name="" pathstr="0," selected>一级栏目</option>
+      </select>
+    </li>
+      
+    <li>栏目名称
+      <input id="CategoryName" type="text" value="" class="dfinput" /><i>多个关键字用,隔开</i></li>
+
+        <li><label>是否在导航显示</label><cite>
+            <input name="ShowNav" type="radio" value="1" checked="checked" />是&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="ShowNav" type="radio" value="0" />否</cite></li>
+    <li><label>是否审核</label><cite>
+        <input name="IsPass" type="radio" value="1" checked="checked" />是&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="IsPass" type="radio" value="0" />否</cite></li>
+    <li><label>引用地址</label><input name=""id= 'MyUrl'type="text" class="dfinput" value="http://www.erdangjiade.com/" /></li>
+    <li></li>
+    <li><label>&nbsp;</label><input name="" type="button" class="btn" onclick="AddCategory();" value="确认保存"/></li>
+    </ul>
+    
+    
+    </div>
+
+
+</body>
+
+<script>
+    /*添加Category名子*/
+        function AddCategory()
+        {
+            var ParentId = $("#ParentId").val();
+            var CategoryName = $("#CategoryName").val();
+            var MyUrl = $("#MyUrl").val();
+            var ShowNav = $('input[name="ShowNav"]:checked').val();
+            var IsPass = $('input[name="IsPass"]:checked').val();
+            var path=$("#ParentId option:selected").attr("pathstr");
+//            var path = $('input[name="path"]').val();
+            $.post("http://www.tp.com/index.php/Admin/index/AddCategory",
+                    {ParentId:ParentId,CategoryName:CategoryName,MyUrl:MyUrl,ShowNav:ShowNav,IsPass:IsPass,path:path},
+                    function(data){
+                        if(data==1)
+                        {
+                            alert('添加栏目成功！');
+                            window.location.reload();
+                            $("#MyUrl").val("");
+                            $("#CategoryName").val("");
+                        }
+            });
+        }
+    /*获取Category名字*/
+    $.post('http://www.tp.com/index.php/Admin/index/GetCategory',function(data){
+        //这里的data是字符串格式，必须要转换为对象才可以的
+        var jsonData=eval('('+data+')');
+        var SelectValue = '';
+        $.each(jsonData,function(k,v){
+            var len= v.path.split(",").length-2;
+            var mark='';
+            for(var i=0;i<len;i++){
+                mark+="-";
+            }
+            SelectValue+="<option value = "+v.id+" pathstr="+ v.path+">" + mark +v.CategoryName+"</option>";
+        });
+        $("select").append(SelectValue);
+    });
+
+
+</script>
+
+</html>

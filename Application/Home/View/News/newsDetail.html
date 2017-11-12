@@ -1,0 +1,68 @@
+<include file="Public:head" />
+
+<section class="toolbar">
+    <a href="index.html" title="返回首页" class="homelink"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <span class="switch glyphicon glyphicon-th-list"></span>
+    <div class="btnList">
+        <div class="link btn-group">
+            <a href="/news/" class="btn btn-default">文章列表</a>
+        </div>
+        <div class="link btn-group">
+            <foreach name="newsPre" item="newsPre">
+            <a href="/newsDetail?id={$newsPre.id}" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>PREV</a>
+            </foreach>
+        </div>
+        <div class="link btn-group">
+            <foreach name="newsNext" item="newsNext">
+            <a href="/newsDetail?id={$newsNext.id}" class="btn btn-default">NEXT<span class="glyphicon glyphicon-arrow-right"></span></a>
+            </foreach>
+        </div>
+    </div>
+</section>
+<section class="artshow content">
+    <div class="box">
+        <foreach name="newsDetail" item="rownew">
+            <h1>{$rownew.title}</h1>
+            <span class="rel"> 千助科技<u>•</u>{$rownew.createtime|date="Y-m-d",###}<u>•</u><a href="" target="_blank">{$rownew.categoryname}</a><u>•</u><span class="glyphicon glyphicon-eye-open" title="浏览次数"></span> {$rownew.clicknum} </span>
+            <div class="words">
+                {$rownew.details|html_entity_decode=###}
+            </div>
+        </foreach>
+        <dl class="tags">
+            <dt>
+                文章关键词
+                <span class="glyphicon glyphicon-tag"></span>
+            </dt>
+            <dd>
+                <foreach name="tagList" item="rowtag">
+                    <a href="#" target="_blank">{$rowtag.tagname}</a>
+                </foreach>
+            </dd>
+        </dl>
+        <div class="bdsharebuttonbox">
+            <a href="#" class="bds_more" data-cmd="more"></a>
+            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+            <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+        </div>
+    </div>
+    <aside>
+        <div class="ad">
+            <a href="/index/" title="做网站，找千助" target="_blank"><img src="{$url_ali}images/ad.jpg" alt="建网站，找千助，网站建设品牌设计企业" /></a>
+        </div>
+        <div class="caption">
+            <h3>推荐阅读</h3>
+        </div>
+        <ul class="items">
+            <foreach name="newsTuijian" item="tuijian">
+                <li> <a href="/newsDetail?id={$tuijian.id}" target="_blank" class="thumb"><img src="__PUBLIC__/Uploads/{$tuijian.newsimg}" alt="{$tuijian.title}" /></a> <span class="title"><a href="/newsDetail?id={$tuijian.id}" target="_blank" title="{$tuijian.title}">{$tuijian.title} ...</a></span> <span class="rel">{$tuijian.createtime|date="m-d",###}<span class="glyphicon glyphicon-eye-open" title="浏览次数"></span>{$tuijian.clicknum}</span> </li>
+            </foreach>
+        </ul>
+    </aside>
+</section>
+
+
+
+<include file="Public:foot" />

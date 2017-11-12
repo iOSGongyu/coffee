@@ -1,0 +1,47 @@
+<include file="Public:head" />
+<div class="newslist_cont clearboth">
+    <h2 class="news_title">公告列表</h2>
+    <div class="notice_list">
+        <foreach name="noticeLists" item="row">
+        <div class="notice_item clearboth">
+            <a href="/News/newsDetail?id={$row.id}" class="item_title"><span>{$row.title}</span><em class="time">{$row.createtime|date="Y-m-d",###}</em></a>
+            <p class="item_text">{$row['describe']|mb_substr=0,100,'utf-8'}</p>
+            <a href="/News/newsDetail?id={$row.id}" class="item_more">详细信息>></a>
+        </div>
+       </foreach>
+    </div>
+    <div class="Page">
+       {$page}
+    </div>
+</div>
+<include file="Public:foot" />
+<script>
+    $(function () {
+        reset();
+
+        $(window).resize(function () {
+            reset();
+        })
+        $(window).scroll(function () {
+            reset();
+        })
+        function reset() {
+            var wt = $(window).scrollTop();
+            var wh = $(window).height();
+            $(".product_box").each(function () {
+                var this_t = 350 - (wh - $(this).offset().top);
+                var this_u = 700 - (wh - $(this).offset().top);
+                if (wt > this_t) {
+                    $(this).addClass("run_1");
+                }
+                if (wt > this_u) {
+                    $(this).addClass("run_2");
+                }
+            })
+        }
+    })
+</script>
+<script>
+    $('.current ').attr('href', '').addClass("cur");
+</script>
+

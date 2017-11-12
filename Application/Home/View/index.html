@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+
+    <volist name="mydata" id="vo">
+        {$vo.password}:{$vo.user}<br/>
+   </volist><hr><hr>
+    <foreach name="mydata" item="vo" >
+        {$key}|{$vo.id}:{$vo.name}
+    </foreach>
+
+
+
+
+    </body>
+</html>

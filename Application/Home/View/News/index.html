@@ -1,0 +1,40 @@
+<include file="Public:head" />
+
+<section class="toolbar">
+    <a href="index.html" title="返回首页" class="homelink"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <span class="switch glyphicon glyphicon-th-list"></span>
+    <div class="category btn-group">
+        <a href="/news/" class="btn btn-default">全部</a>
+        <foreach name="categoryList" item="row1">
+            <a href="/news?cid={$row1.id}" class="btn btn-default">{$row1.categoryname}</a>
+        </foreach>
+    </div>
+</section>
+<section class="artlist content">
+        <ul class="items">
+            <volist name="newsList" id="rownew">
+                <li> <p class="left"> <span class="date">{$rownew.createtime|date="d",###}<u>{$rownew.createtime|date="M",###}</u></span> <a href="/newsDetail?id={$rownew.id}" target="_blank" class="thumb"><img src="__PUBLIC__/Uploads/{$rownew.newsimg}" alt="{$rownew.title}" /></a> </p> <p class="right"> <span class="title"><a href="/newsDetail?id={$rownew.id}" target="_blank">{$rownew.title}</a></span> <span class="rel">{$rownew.createtime|date="Y",###}<u>•</u>围观热度 {$rownew.clicknum}<u>•</u><a href="/newsDetail?id={$rownew.id}">{$rownew.categoryname}</a></span> <span class="summary">{$rownew.describe} . . .</span> <span class="tags"> <span class="glyphicon glyphicon-tag"></span> <a href="" target="_blank">网站推广</a> </span> </p> </li>
+            </volist>
+        </ul>
+        <div id="Paging" class="paging">
+            <div class="qzPagination">
+                <span class="disabled prev">&laquo;</span>
+                <span class="current">1</span>
+                <a href="article_detail.html?id=page-2/">2</a>
+                <a href="article_detail.html?id=page-3/">3</a>
+                <a href="article_detail.html?id=page-4/">4</a>
+                <a href="article_detail.html?id=page-5/">5</a>
+                <a href="article_detail.html?id=page-6/">6</a>
+                <a href="article_detail.html?id=page-7/">7</a>
+                <a href="article_detail.html?id=page-8/">8</a>
+                <a href="article_detail.html?id=page-2/" class="next">&raquo;</a>
+            </div>
+        </div>
+</section>
+
+
+
+
+
+
+<include file="Public:foot" />

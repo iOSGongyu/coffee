@@ -1,0 +1,57 @@
+<include file="Public:head" />
+
+<section class="toolbar">
+    <a href="index.html" title="返回首页" class="homelink"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <span class="switch glyphicon glyphicon-th-list"></span>
+    <div class="btnList">
+        <div class="link btn-group ml">
+            <a href="/case/" class="btn btn-default" title="千助网站建设作品集">作品集</a>
+        </div>
+        <div class="link btn-group">
+            <foreach name="casePre" item="casepre">
+            <a href="/casedetail?id={$casepre.id}" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>PREV</a>
+            </foreach>
+        </div>
+        <div class="link btn-group">
+            <foreach name="caseNext" item="caseNext">
+            <a href="/casedetail?id={$caseNext.id}" class="btn btn-default">NEXT<span class="glyphicon glyphicon-arrow-right"></span></a>
+            </foreach>
+        </div>
+    </div>
+</section>
+<section class="caseshow content">
+    <foreach name="caseList" item="rowcase">
+    <div class="caption">
+        项目介绍
+    </div>
+    <div class="words">
+        <h1>[ {$rowcase.title} ]</h1>
+        <span class="rel">网站设计<u>•</u><a href="" target="_blank" title="制造行业网站设计">{$rowcase.categoryname}</a></span>
+        <dl class="tags">
+            <dt>
+                案例标签
+                <span class="glyphicon glyphicon-tag"></span>
+            </dt>
+            <foreach name="tagList" item="rowtag">
+                <dd>
+                    <a href="" target="_blank">{$rowtag.tagname}</a>
+                </dd>
+            </foreach>
+
+        </dl>
+    </div>
+    <div class="caption">
+        设计欣赏
+    </div>
+    <div class="demo">
+
+        {$rowcase.detail|html_entity_decode=###}
+    </div>
+    </foreach>
+
+</section>
+
+
+
+
+<include file="Public:foot" />

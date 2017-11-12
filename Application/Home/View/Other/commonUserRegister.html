@@ -1,0 +1,315 @@
+<include file="Public:head" />
+<form action="/Register/commonUserRegister" method="post" enctype="multipart/form-data" id="common_user_register">
+    <div class="register_container">
+        <div class="register_room">
+            <img class="registerUser_img" src="{$url_ali}images/login/registerUser_img.png" />
+            <div class="register_box">
+                <strong class="register_title">用户注册<a href="/agentRegister/" >代理商点此注册</a></strong>
+                <div class="register_itembox">
+                    <input type="text" name="businessName" id="business_name" class="register_txt user" placeholder="请输入名帐号名称" />
+                    <span class="verify_item business_name_error_message"></span>
+                </div>
+                <div class="register_itembox">
+                    <input type="text" name="telephone" id="register_mobile" class="register_txt phone" placeholder="请输入手机号码" />
+                    <span class="verify_item small mobile_error_messages"></span>
+                </div>
+                <div class="register_itembox">
+                    <input type="text" id="register_username" name="username" class="register_txt name" placeholder="请输入昵称" />
+                    <span class="verify_item small register_username"></span>
+                </div>
+                <div class="register_itembox">
+                    <div class="code_box clearboth">
+                        <input type="text" name="phoneCode" id="get_message" class="register_txt code" placeholder="请输入验证码" />
+                        <span class="code_btn get-short-message">免费获取验证码</span>
+                    </div>
+                    <span class="verify_item get_short_message_error"></span>
+                </div>
+                <div class="register_itembox">
+                    <input type="password" name="password" id="password" class="register_txt pwd" placeholder="请输入密码" />
+                    <span class="verify_item password_error"></span>
+                </div>
+                <div class="register_itembox">
+                    <input type="password" name="repassword" id="confirmation" class="register_txt pwd last" placeholder="请确认密码" />
+                    <span class="verify_item confirmation_error"></span>
+                </div>
+                <div class="deal_box">
+                    <input type="checkbox" class="ck" id="ck1" checked="checked"/>
+                    <label class="ck_lab" for="ck1">我同意<a href="#" target="_blank">《麦粉吧用户注册协议》</a></label>
+                    <span class="ck1_error"></span>
+                </div>
+                <input type="button" id="submit_button" class="register_btn" value="免费注册" />
+            </div>
+        </div>
+    </div>
+</form>
+<include file="Public:foot" />
+<script type="text/javascript">
+$(function(){
+    /*获取短信息*/
+    $('.get-short-message').click(function(){
+        var phone = $("#register_mobile").val();
+        var data = {"phone":phone};
+        var UserPhone = $.trim($("#register_mobile").val());
+        var errorMessage = null ;
+        var ret = null;
+        if(UserPhone.length == ''){
+            errorMessage = "亲，手机不能为空哦" ;
+            $(".mobile_error_messages").text(errorMessage);
+            ret = false;
+        }else if(!UserPhone.match(/^(13[0,1,2,3,4,5,6,7,8,9]|17[6,7,8]|15[0,1,2,3,4,5,6,7,8,9]|18[0,1,2,3,4,5,6,7,8,9]|14[1,2,3,4,5,6,7,8,9])\d{8}$/)){
+            errorMessage = "亲，手机格式不对哦" ;
+            $(".mobile_error_messages").text(errorMessage);
+            ret = false;
+        }else{
+            $.get('/Ajax/getCodeByPhone',data,function(res){
+                if(res==200){
+                    errorMessage = "获取成功,请注意查收。" ;
+                    $(".get_short_message_error").text(errorMessage);
+                }else{
+                    errorMessage = "获取失败,请联系管理员" ;
+                    $(".get_short_message_error").text(errorMessage);
+                }
+            });
+        }
+    });
+});
+/***
+ * 校验商家
+ * */
+function checkBusinessName(){
+    var businessName = $.trim($("#business_name").val());
+    var errorMessage = null ;
+    var ret = null;
+    if(businessName.length == ''){
+        errorMessage = "亲，用户名不能为空哦" ;
+        ret = false;
+    }else{
+        var data={"businessName":businessName};
+        $.ajax({
+            type: "GET",
+            async:false,//默认是true
+            url: "/Ajax/isRegisterCommonUser",
+            data: data,
+            success:function(data, st){
+                if(data==1){
+                    ret = false;
+                    errorMessage = '亲，此用户名已被注册，换一个哦。';
+                }else{
+                        errorMessage = 'ok';
+                        ret = true;
+                }
+            }
+        })
+    }
+    $(".business_name_error_message").text(errorMessage);
+    return ret;
+}
+/*
+ *校验手机号
+ */
+function checkUserPhone(){
+    var UserPhone = $.trim($("#register_mobile").val());
+    var errorMessage = null ;
+    var ret = null;
+    if(UserPhone.length == ''){
+        errorMessage = "亲，手机不能为空哦" ;
+        ret = false;
+    }else if(!UserPhone.match(/^(13[0,1,2,3,4,5,6,7,8,9]|17[6,7,8]|15[0,1,2,3,4,5,6,7,8,9]|18[0,1,2,3,4,5,6,7,8,9]|14[5,7])\d{8}$/)){
+        errorMessage = "亲，手机格式不对哦" ;
+        ret = false;
+    }else{
+
+        var data={"UserPhone":UserPhone};
+        $.ajax({
+            type: "GET",
+            async:false,//默认是true
+            url: "/Ajax/isCommonAgentPhone",
+            data: data,
+            success:function(data, st){
+                if(data==1){
+                    ret = false;
+                    errorMessage = '已被注册,换一个哦';
+                }else{
+                    errorMessage = '';
+                    ret = true;
+                }
+            }
+        })
+
+
+    }
+    $(".mobile_error_messages").text(errorMessage);
+    return ret;
+}
+/***
+ * 校验用户
+ */
+function checkRegisterName(){
+    var register_username = $.trim($("#register_username").val());
+    var errorMessage = null ;
+    var ret = null;
+    if(register_username.length == ''){
+        errorMessage = "亲，昵称不能为空哦" ;
+        ret = false;
+    }else{
+        errorMessage = "" ;
+        ret = true;
+    }
+    $(".register_username").text(errorMessage);
+    return ret;
+}
+/***
+ * 校验用户密码
+ */
+function checkUserPassword(){
+    var UserPassword = $.trim($("#password").val());
+    var errorMessage = null;
+    var ret = null;
+    if(UserPassword.length == ""){
+        errorMessage = "亲，密码不能为空" ;
+        ret = false;
+
+    }else if(UserPassword.length < 6){
+        errorMessage = "亲，密码不能小于六位数" ;
+        ret = false;
+    }else{
+        errorMessage = "" ;
+        ret = true;
+    }
+    $(".password_error").text(errorMessage);
+    return ret;
+}
+/***
+ * 再次校验用户密码
+ */
+function checkUserRepassword(){
+    var Repassword = $.trim($("#confirmation").val());
+    var Password = $.trim($("#password").val());
+    var errorMessage = null;
+    var ret = null;
+    if(Repassword.length == ""){
+        errorMessage = "亲，重复密码不能为空哦";
+        ret = false;
+    }else if(Repassword != Password){
+        errorMessage = "亲，两次密码输入的不一致哦" ;
+        ret = false;
+    }else{
+        errorMessage = "" ;
+        ret = true;
+    }
+    $(".confirmation_error").text(errorMessage);
+    return ret;
+}
+//短信验证
+function checkShortMessage(){
+    var result = false;
+    var  errorMessage = null;
+    var ShortMessage = $.trim($("#get_message").val());
+    if(ShortMessage.length == ""){
+        errorMessage = "亲，短信不能为空";
+        result = false;
+    }else if(ShortMessage.length != 6){
+        errorMessage = "亲，短信必须是6位数字" ;
+        result = false;
+    }else{
+        var UserPhone = $.trim($("#register_mobile").val());
+        var data={"ShortMessage":ShortMessage,"UserPhone":UserPhone};
+        $.ajax({
+            type: "GET",
+            async:false,//默认是true
+            url: "/Ajax/identifyCode",
+            data: data,
+            success:function(data, st){
+                if(data==200){
+                    result = true;
+                    errorMessage = '';
+                }else{
+                    errorMessage = "亲，短信已失效，请重新获取" ;
+                    result = false;
+                }
+            }
+        })
+    }
+    $(".get_short_message_error").text(errorMessage);
+    return result;
+}
+function checkAgreement(){
+    var errorMessage = null;
+    var ret = null;
+    if($('#ck1').is(':checked')){
+        errorMessage = '';
+        ret = true;
+    }else{
+        errorMessage = "亲，请接受服务条款";
+        ret = false;
+    }
+    $(".ck1_error").text(errorMessage);
+    return ret;
+}
+$("#business_name").blur(function(){
+    checkBusinessName();
+});
+$("#register_username").blur(function(){
+    checkRegisterName();
+});
+$("#register_mobile").blur(function(){
+    checkUserPhone();
+});
+$("#get_message").blur(function(){
+    checkShortMessage();
+});
+$("#password").blur(function(){
+    checkUserPassword();
+});
+$("#confirmation").blur(function(){
+    checkUserRepassword();
+});
+$("#submit_button").click(function(){
+    if(checkAgreement()==false){
+        return false;
+    }else if(checkBusinessName() == false){
+        return false;
+    }else if(checkUserPhone() == false){
+        return false;
+    }else if(checkRegisterName() == false){
+        return false;
+    }else if(checkUserPassword() == false){
+        return false;
+    }else if(checkUserRepassword() == false){
+        return false;
+    }else if(checkShortMessage()==false){
+        return false;
+    }else{
+        $("#common_user_register").submit();
+    }
+});
+</script>
+<script>
+    $(function () {
+        //控制画面高度
+        if ($(window).height() > 700) {
+            $(".register_container").height($(window).height() - 48 - 78);
+        }
+        $(window).resize(function () {
+            if ($(window).height() > 700) {
+                $(".register_container").height($(window).height() - 48 - 78);
+            }
+        })
+        //验证码
+        $(".code_btn").click(function () {
+            var i = 60;
+            $(this).html(i).addClass("noclick");
+            var set1 = setInterval(function () {
+                i--;
+                if (i > 0) {
+                    $(".code_btn").html(i);
+                } else {
+                    clearInterval(set1);
+                    $(".code_btn").html("再次获取验证码").removeClass("noclick");
+                }
+            }, 1000)
+        })
+    })
+</script>
+
+

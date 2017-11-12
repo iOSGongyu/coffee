@@ -1,0 +1,454 @@
+<div class="sidebar" id="sidebar">
+<script type="text/javascript">
+    try {
+        ace.settings.check('sidebar', 'fixed')
+    } catch (e) {
+    }
+</script>
+<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+    <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+        <button class="btn btn-success">
+            <i class="icon-signal"></i>
+        </button>
+
+        <button class="btn btn-info">
+            <i class="icon-pencil"></i>
+        </button>
+
+        <button class="btn btn-warning">
+            <i class="icon-group"></i>
+        </button>
+
+        <button class="btn btn-danger">
+            <i class="icon-cogs"></i>
+        </button>
+    </div>
+
+    <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+        <span class="btn btn-success"></span>
+
+        <span class="btn btn-info"></span>
+
+        <span class="btn btn-warning"></span>
+
+        <span class="btn btn-danger"></span>
+    </div>
+</div>
+<!-- #sidebar-shortcuts -->
+
+<ul class="nav nav-list" id="sidebar-nav">
+<li class="sidebar-dashboard <if condition='$leftSadebarActive eq 1'>active open</if>">
+    <a href="__APP__/Admin/index/">
+        <i class="icon-dashboard"></i>
+        <span class="menu-text"> 控制面板 </span>
+    </a>
+</li>
+
+<li class="sidebar-user-manage <if condition='$leftUsersManager eq 1'>active open</if>" style="display: none;">
+    <a href="#" class="dropdown-toggle">
+        <i class="green icon-user bigger-120"></i>
+        <span class="menu-text">用户管理 </span>
+        <b class="arrow icon-angle-down"></b>
+    </a>
+    <ul class="submenu" >
+        <li <if condition='$leftUsers eq 1'>class="active open"</if>>
+            <a href="#" class="dropdown-toggle">
+                <i class="icon-double-angle-right"></i>
+                查看用户
+                <b class="arrow icon-angle-down"></b>
+            </a>
+
+            <ul class="submenu">
+                <li <if condition='$leftAgentUserList eq 1'>class="active"</if>>
+                    <a href="javascript:void(0);" onclick="changeagentUserRecords()">
+                        <i class="icon-leaf"></i>
+                        代理商用户列表
+                    </a>
+                </li>
+                <li <if condition='$commonUserList eq 1'>class="active"</if> <if condition="$_SESSION['role'] != 0">style="display:none"</if>>
+                    <a href="javascript:void(0);" onclick="changecommonUserRecords()">
+                        <i class="icon-comments"></i>
+                        普通用户列表
+                    </a>
+                </li>
+
+                <li <if condition='$expand eq 1'>class="active open"</if> <if condition="$_SESSION['role'] != 0">style="display:none"</if>>
+                    <a href="#" class="dropdown-toggle">
+                        <i class="icon-pencil"></i>
+                        拓展功能
+                 <b class="arrow icon-angle-down"></b>
+                    </a>
+                    <ul class="submenu">
+                        <li <if condition='$leftInvitationLists eq 1'>class="active"</if>>
+                            <a href="javascript:void(0);" onclick="changeinvitationRecords()">
+                                <i class="icon-plus"></i>
+                                邀请码列表
+                            </a>
+                        </li>
+
+                        <li <if condition='$leftInvitationAdd eq 1'>class="active"</if>>
+                            <a href="__APP__/Admin/User/invitationAdd">
+                                <i class="icon-eye-open"></i>
+                                添加邀请码
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+
+    </ul>
+</li>
+
+<li <if condition='$leftCategoryManager eq 1'>class="active open"</if> <if condition="$_SESSION['role'] != 0">style="display:none"</if>>
+    <a href="#" class="dropdown-toggle">
+        <i class="icon-file-alt"></i>
+			<span class="menu-text">
+			分类管理
+			</span>
+
+        <b class="arrow icon-angle-down"></b>
+    </a>
+
+    <ul class="submenu">
+        <li <if condition='$leftCategoryList eq 1'>class="active"</if>>
+            <a href="javascript:void(0);" onclick="changeCategoryRecords()">
+                <i class="icon-double-angle-right"></i>
+                分类列表
+            </a>
+        </li>
+
+        <li <if condition='$leftCategoryAdd eq 1'>class="active"</if>>
+            <a href="__APP__/Admin/Category/categoryAdd">
+                <i class="icon-double-angle-right"></i>
+                添加分类
+            </a>
+        </li>
+    </ul>
+</li>
+
+<!--<li <if condition='$leftLearnManager eq 1'>class="active open"</if>>-->
+<li <if condition='$leftLearnManager eq 1'>class="active open"</if> <if condition="$_SESSION['role'] != 0">style="display:none"</if>>
+    <a href="#" class="dropdown-toggle">
+        <i class="icon-edit"></i>
+        <span class="menu-text"> 案例管理 </span>
+
+        <b class="arrow icon-angle-down"></b>
+    </a>
+
+    <ul class="submenu">
+        <li <if condition='$leftLearnList eq 1'>class="active"</if>>
+        <a href="javascript:void(0);" onclick="changeLearnRecords()">
+            <i class="icon-double-angle-right"></i>
+            案例列表
+        </a>
+        </li>
+
+        <li <if condition='$leftLearnAdd eq 1'>class="active"</if>>
+            <a href="__APP__/Admin/Learn/learnInformationAdd">
+                <i class="icon-double-angle-right"></i>
+                添加案例
+            </a>
+        </li>
+    </ul>
+</li>
+
+<li <if condition='$leftWechatManager eq 1'>class="active open"</if> <if condition="$_SESSION['role'] != 0">style="display:none"</if>>
+<a href="#" class="dropdown-toggle">
+    <i class="icon-file-alt"></i>
+			<span class="menu-text">
+			tag管理
+			</span>
+
+    <b class="arrow icon-angle-down"></b>
+</a>
+
+<ul class="submenu">
+    <li <if condition='$leftWechatList eq 1'>class="active"</if>>
+    <a href="javascript:void(0);" onclick="changeWechatRecords()">
+        <i class="icon-double-angle-right"></i>
+        tag列表
+    </a>
+    </li>
+
+    <li <if condition='$leftWechatAdd eq 1'>class="active"</if>>
+    <a href="__APP__/Admin/Wechat/wechatAdd">
+        <i class="icon-double-angle-right"></i>
+        添加tag
+    </a>
+    </li>
+
+</ul>
+</li>
+
+<li <if condition='$leftNewsManager eq 1'>class="active open"</if>  >
+    <a href="#" class="dropdown-toggle">
+        <i class="icon-edit"></i>
+        <span class="menu-text"> 新闻管理 </span>
+
+        <b class="arrow icon-angle-down"></b>
+    </a>
+
+    <ul class="submenu">
+        <li <if condition='$leftNews eq 1'>class="active open"</if>>
+        <a href="#" class="dropdown-toggle">
+        <i class="icon-pencil"></i>
+
+        查看新闻
+        <b class="arrow icon-angle-down"></b>
+        </a>
+
+            <ul class="submenu">
+                <li <if condition='$leftNewsList eq 1'>class="active"</if>>
+                <a href="javascript:void(0);" onclick="changenewsRecords()">
+                <i class="icon-eye-open"></i>
+                新闻列表
+                </a>
+                </li>
+
+                <!--<li <if condition='$leftNoticeList eq 1'>class="active"</if>>-->
+                <!--<a href="javascript:void(0);" onclick="changenoticeRecords()">-->
+                <!--<i class="icon-eye-open"></i>-->
+                <!--公告列表-->
+                <!--</a>-->
+                <!--</li>-->
+
+                <!--<li <if condition='$leftActivityList eq 1'>class="active"</if>>-->
+                <!--<a href="javascript:void(0);" onclick="changeactivityRecords()">-->
+                    <!--<i class="icon-eye-open"></i>-->
+                    <!--活动列表-->
+                <!--</a>-->
+                <!--</li>-->
+            </ul>
+        </li>
+
+        <li <if condition='$leftNewsAdd eq 1'>class="active"</if>>
+            <a href="__APP__/Admin/News/newsAdd">
+                <i class="icon-double-angle-right"></i>
+                添加新闻
+            </a>
+        </li>
+
+
+    </ul>
+</li>
+
+<li <if condition='$leftOrderManager eq 1'>class="active open"</if> style="display:none;">
+    <a href="#" class="dropdown-toggle">
+        <i class="icon-shopping-cart"></i>
+        <span class="menu-text"> 订单管理 </span>
+
+        <b class="arrow icon-angle-down"></b>
+    </a>
+
+    <ul class="submenu">
+        <li <if condition='$leftOrder eq 1'>class="active"</if>>
+            <a href="javascript:void(0);" onclick="changeOrderRecords()">
+                <i class="icon-double-angle-right"></i>
+                订单列表
+            </a>
+        </li>
+
+
+    </ul>
+</li>
+<li <if condition='$leftAdminUserManager eq 1'>class="active open"</if> <if condition="$_SESSION['role'] != 0">style="display:none"</if>>
+    <a href="#" class="dropdown-toggle">
+        <i class="icon-star orange"></i>
+        <span class="menu-text"> 网站管理 </span>
+
+        <b class="arrow icon-angle-down"></b>
+    </a>
+
+    <ul class="submenu">
+        <li <if condition='$leftAdminUserList eq 1'>class="active"</if>>
+            <a href="javascript:void(0);" onclick="changeWebRecords()">
+                <i class="icon-double-angle-right"></i>
+                管理员列表
+            </a>
+        </li>
+        <li <if condition='$leftAdminUserAdd eq 1'>class="active"</if> >
+            <a href="__APP__/Admin/Web/userAdd" class="dropdown-toggle">
+                <i class="icon-plus"></i>
+                添加管理员
+            </a>
+        </li>
+
+        <li <if condition='$leftAdminMessageList eq 1'>class="active"</if> >
+        <a href="javascript:void(0);" class="dropdown-toggle" onclick="changeMessageRecords()">
+            <i class="icon-plus"></i>
+            留言列表
+        </a>
+        </li>
+        <li <if condition='$leftAdminSeo eq 1'>class="active open"</if> <if condition="$_SESSION['role'] != 0">style="display:none"</if>>
+        <a href="#" class="dropdown-toggle">
+            <i class="icon-pencil"></i>
+            SEO功能
+            <b class="arrow icon-angle-down"></b>
+        </a>
+            <ul class="submenu">
+                <li <if condition='$leftAdminSeoLists eq 1'>class="active"</if>>
+                <a href="__APP__/Admin/Seo/lists" >
+                    <i class="icon-plus"></i>
+                    SEO列表
+                </a>
+                </li>
+
+                <li <if condition='$leftAdminSeoAdd eq 1'>class="active"</if>>
+                <a href="__APP__/Admin/Seo/seoAdd">
+                    <i class="icon-eye-open"></i>
+                    添加SEO
+                </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</li>
+<li <if condition='$calendar eq 1'>class="active"</if>>
+    <a href="__APP__/Admin/Other/calendar">
+        <i class="icon-calendar"></i>
+        <span class="menu-text">
+		Calendar
+		<span class="badge badge-transparent tooltip-error"title="2&nbsp;Important&nbsp;Events">
+		<i class="icon-warning-sign red bigger-130"></i></span>
+		</span>
+    </a>
+</li>
+</ul>
+<!-- /.nav-list -->
+
+<div class="sidebar-collapse" id="sidebar-collapse">
+    <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+</div>
+
+<script type="text/javascript">
+    try {
+        ace.settings.check('sidebar', 'collapsed')
+    } catch (e) {
+    }
+</script>
+</div>
+<script>
+    function changeagentUserRecords(){
+        var records = 10;
+        var data={"records":records};
+        $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+            if(rs==1){
+                location.href='__APP__/Admin/User/agentUserList';
+            }
+        })
+    }
+    function changecommonUserRecords(){
+        var records = 10;
+        var data={"records":records};
+        $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+            if(rs==1){
+                location.href='__APP__/Admin/User/commonUserList';
+            }
+        })
+    }
+    function changeinvitationRecords(){
+        var records = 10;
+        var data={"records":records};
+        $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+            if(rs==1){
+                location.href='__APP__/Admin/User/invitationLists';
+            }
+        })
+    }
+    function changeCategoryRecords(){
+        var records = 10;
+        var data={"records":records};
+        $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+                if(rs==1){
+                    location.href='__APP__/Admin/Category/lists';
+                }
+         })
+    }
+            function changeLearnRecords(){
+                var records = 10;
+                var data={"records":records};
+                $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+                    if(rs==1){
+                        location.href='__APP__/Admin/Learn/lists';
+                    }
+                })
+            }
+
+            function changeWechatRecords(){
+                var records = 10;
+                var data={"records":records};
+                $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+                    if(rs==1){
+                        location.href='__APP__/Admin/Wechat/lists';
+                    }
+                })
+            }
+            function changeBrandRecords(){
+                var records = 10;
+                var data={"records":records};
+                $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+                    if(rs==1){
+                        location.href='__APP__/Admin/Wechat/brandLists';
+                    }
+                })
+            }
+
+    function changenoticeRecords(){
+        var records = 10;
+        var data={"records":records};
+        $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+            if(rs==1){
+                location.href='__APP__/Admin/News/noticeLists';
+            }
+        })
+    }
+    function changeactivityRecords(){
+        var records = 10;
+        var data={"records":records};
+        $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+            if(rs==1){
+                location.href='__APP__/Admin/News/activityList';
+            }
+        })
+    }
+    function changenewsRecords(){
+        var records = 10;
+        var data={"records":records};
+        $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+            if(rs==1){
+                location.href='__APP__/Admin/News/lists';
+            }
+        })
+    }
+            function changeOrderRecords(){
+                var records = 10;
+                var data={"records":records};
+                $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+                    if(rs==1){
+                        location.href='__APP__/Admin/Order/lists';
+                    }
+                })
+            }
+            function changeWebRecords(){
+                var records = 10;
+                var data={"records":records};
+                $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+                    if(rs==1){
+                        location.href='__APP__/Admin/Web/userList';
+                    }
+                })
+            }
+            function changeMessageRecords(){
+                var records = 10;
+                var data={"records":records};
+                $.get('__APP__/Admin/Ajax/changeRecords',data,function(rs){
+                    if(rs==1){
+                        location.href='__APP__/Admin/Web/messageLists';
+                    }
+                })
+            }
+</script>
+
+

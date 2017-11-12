@@ -1,0 +1,211 @@
+[ 2016-05-18T09:23:48+08:00 ] 127.0.0.1 /Admin/Login/login?user=admin&passwd=admin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' E:\wamp\www\cms\Application\Admin\Controller\CommonController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `sucai_admin` [ RunTime:0.3830s ]
+SQL: SELECT * FROM `sucai_admin` WHERE `user` = 'admin' AND `passwd` = '0d7aaae371d622793246c719c55f1f7f' LIMIT 1   [ RunTime:0.0660s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-05-18T09:23:59+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-18T09:24:09+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-18T09:24:20+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-18T09:24:56+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-18T09:25:41+08:00 ] 127.0.0.1 /Admin/Ajax/newsUpdate
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+
+[ 2016-05-18T09:32:04+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-18T09:32:06+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-18T09:36:34+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-18T09:38:14+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-18T09:42:23+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-18T11:01:40+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-18T11:01:48+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-18T11:20:56+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-18T14:07:47+08:00 ] 127.0.0.1 /Admin/Ajax/seoAdd?alias=index&title=%E9%A6%96%E9%A1%B5&keywords=%E9%A6%96%E9%A1%B5&desc=%E9%A6%96%E9%A1%B5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sucai_seo` [ RunTime:0.0040s ]
+SQL: INSERT INTO `sucai_seo` (`alias`,`title`,`keywords`,`desc`,`createTime`) VALUES ('index','首页','首页','首页','1463551666') [ RunTime:0.1870s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-05-18T14:16:10+08:00 ] 127.0.0.1 /Admin/Ajax/seoAdd?alias=case&title=%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B&keywords=%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B&desc=%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sucai_seo` [ RunTime:0.0040s ]
+SQL: INSERT INTO `sucai_seo` (`alias`,`title`,`keywords`,`desc`,`createTime`) VALUES ('case','经典案例','经典案例','经典案例','1463552170') [ RunTime:0.0370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-18T14:17:03+08:00 ] 127.0.0.1 /Admin/Ajax/seoAdd?alias=casedetail&title=%E6%A1%88%E4%BE%8B%E8%AF%A6%E6%83%85&keywords=%E6%A1%88%E4%BE%8B%E8%AF%A6%E6%83%85&desc=%E6%A1%88%E4%BE%8B%E8%AF%A6%E6%83%85
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `sucai_seo` [ RunTime:0.0040s ]
+SQL: INSERT INTO `sucai_seo` (`alias`,`title`,`keywords`,`desc`,`createTime`) VALUES ('casedetail','案例详情','案例详情','案例详情','1463552223') [ RunTime:0.0470s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-18T14:17:52+08:00 ] 127.0.0.1 /Admin/Ajax/seoAdd?alias=service&title=%E6%9C%8D%E5%8A%A1%E8%8C%83%E5%9B%B4&keywords=%E6%9C%8D%E5%8A%A1%E8%8C%83%E5%9B%B4&desc=%E6%9C%8D%E5%8A%A1%E8%8C%83%E5%9B%B4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sucai_seo` [ RunTime:0.0040s ]
+SQL: INSERT INTO `sucai_seo` (`alias`,`title`,`keywords`,`desc`,`createTime`) VALUES ('service','服务范围','服务范围','服务范围','1463552272') [ RunTime:0.0890s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-18T14:20:53+08:00 ] 127.0.0.1 /Admin/Ajax/seoAdd?alias=news&title=%E6%96%B0%E9%97%BB%E8%A7%82%E7%82%B9&keywords=%E6%96%B0%E9%97%BB%E8%A7%82%E7%82%B9&desc=%E6%96%B0%E9%97%BB%E8%A7%82%E7%82%B9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `sucai_seo` [ RunTime:0.0040s ]
+SQL: INSERT INTO `sucai_seo` (`alias`,`title`,`keywords`,`desc`,`createTime`) VALUES ('news','新闻观点','新闻观点','新闻观点','1463552453') [ RunTime:0.0380s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-18T14:21:24+08:00 ] 127.0.0.1 /Admin/Ajax/seoAdd?alias=newsDetail&title=%E6%96%B0%E9%97%BB%E8%A7%82%E7%82%B9%E8%AF%A6%E6%83%85&keywords=%E6%96%B0%E9%97%BB%E8%A7%82%E7%82%B9%E8%AF%A6%E6%83%85&desc=%E6%96%B0%E9%97%BB%E8%A7%82%E7%82%B9%E8%AF%A6%E6%83%85
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sucai_seo` [ RunTime:0.0040s ]
+SQL: INSERT INTO `sucai_seo` (`alias`,`title`,`keywords`,`desc`,`createTime`) VALUES ('newsDetail','新闻观点详情','新闻观点详情','新闻观点详情','1463552484') [ RunTime:0.0290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-05-18T14:22:01+08:00 ] 127.0.0.1 /Admin/Ajax/seoAdd?alias=client&title=%E6%9C%8D%E5%8A%A1%E5%AE%A2%E6%88%B7&keywords=%E6%9C%8D%E5%8A%A1%E5%AE%A2%E6%88%B7&desc=%E6%9C%8D%E5%8A%A1%E5%AE%A2%E6%88%B7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `sucai_seo` [ RunTime:0.0050s ]
+SQL: INSERT INTO `sucai_seo` (`alias`,`title`,`keywords`,`desc`,`createTime`) VALUES ('client','服务客户','服务客户','服务客户','1463552521') [ RunTime:0.0780s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-18T14:22:22+08:00 ] 127.0.0.1 /Admin/Ajax/seoAdd?alias=about&title=%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC&keywords=%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC&desc=%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `sucai_seo` [ RunTime:0.0070s ]
+SQL: INSERT INTO `sucai_seo` (`alias`,`title`,`keywords`,`desc`,`createTime`) VALUES ('about','关于我们','关于我们','关于我们','1463552542') [ RunTime:0.0320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+

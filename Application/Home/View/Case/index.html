@@ -1,0 +1,27 @@
+<include file="Public:head" />
+
+<section class="toolbar">
+    <a href="index.html" title="返回首页" class="homelink"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <span class="switch glyphicon glyphicon-th-list"></span>
+    <div class="category btn-group">
+        <a href="/case/" class="btn btn-default">全部</a>
+        <foreach name="categoryList" item="row1">
+        <a href="/case?cid={$row1.id}" class="btn btn-default">{$row1.categoryname}</a>
+        </foreach>
+    </div>
+</section>
+<section class="caselist content">
+    <ul class="items list-inline">
+        <foreach name="caseLists" item="rowcase">
+            <li> <a href="/casedetail?id={$rowcase.id}" target="_blank"> <img src="__PUBLIC__/Uploads/{$rowcase.img}" alt="{$rowcase.title}" /> <p>{$rowcase.categoryname}<br /><strong>{$rowcase.title}</strong><br />{$rowcase.describe}</p></a> </li>
+        </foreach>
+    </ul>
+    <div id="Paging" class="paging">
+        <div class="qzPagination">
+            {$page}
+        </div>
+    </div>
+</section>
+
+
+<include file="Public:foot" />

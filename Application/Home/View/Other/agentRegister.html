@@ -1,0 +1,583 @@
+<include file="Public:head" />
+<form action="/Register/agentRegister" method="post" enctype="multipart/form-data" id="agent_register">
+    <div class="register_container">
+        <div class="register_room">
+            <img class="registerAgent_img" src="{$url_ali}images/login/registerAgent_img.png" />
+            <div class="register_left">
+                <strong class="register_title">代理商注册<a href="/commonUserRegister/">普通用户点此注册</a></strong>
+                <div class="register_itembox">
+                    <input type="text" class="register_txt name" id="agentname" name="agentname" placeholder="用户名（必填）" />
+                    <span class="verify_item small agentname_error_message"></span>
+                </div>
+                <div class="register_itembox">
+                    <input type="text" name="telephone" id="register_mobile" class="register_txt phone" placeholder="请输入手机号码" />
+                    <span class="verify_item small mobile_error_messages"></span>
+                </div>
+                <div class="site_box" style="margin-bottom:11px">
+                    <select id="regional" name="regional" style="width:211px" >
+                        <option value=""  selected="selected">请选择地域</option>
+                        <option value="直辖市">直辖市</option>
+                        <option value="华东">华东</option>
+                        <option value="华南">华南</option>
+                        <option value="华北">华北</option>
+                        <option value="东北">东北</option>
+                        <option value="西南">西南</option>
+                        <option value="西北">西北</option>
+                        <option value="其他">其他</option>
+                    </select>
+                    <span class="regional_error_message" style="color: red;"></span>
+                </div>
+                <div class="code_box clearboth">
+                    <input type="text" name="phoneCode" id="get_message" class="register_txt code" placeholder="请输入验证码" autocomplete="off" />
+                    <span class="code_btn get-short-message">免费获取验证码</span>
+                    <span class="verify_item lig get_short_message_error"></span>
+                </div>
+                <div class="code_box clearboth">
+                    <input type="password" name="password" id="password" class="register_txt pwd" placeholder="请输入密码" autocomplete="off"/>
+                    <span class="verify_item lig password_error"></span>
+                </div>
+                <div class="wechat_box clearboth">
+                    <input type="text" class="register_txt wechat" id="wechat" name="wechat" placeholder="微信号(必填)" />
+                    <input type="text" class="register_txt slogan" id="wechatSlogan" name="wechatSlogan" placeholder="微信验证口号(必填)" />
+                    <span class="verify_item wechat_error_message"></span>
+                    <span class="verify_item wechatSlogan_error_message"></span>
+                </div>
+                <div class="approve_box">
+                    <strong>实名认证</strong>
+                    <table class="register_table" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th><i>*</i>真实姓名</th>
+                            <td>
+                                <div class="register_itembox">
+                                    <input type="text" class="aprove_txt" id="realname" name="realname" />
+                                    <span class="verify_item lig realname_error_message"></span>
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th><i>*</i>性别</th>
+                            <td>
+                                <input type="radio" class=""  name="sex" value="1" checked="checked"/>男
+                                <input type="radio" class=""  name="sex" value="2"/>女
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="register_right">
+                <table class="register_table" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th><i>*</i>身份证号码</th>
+                        <td>
+                            <div class="register_itembox">
+                                <input type="text" class="aprove_txt" id="idNo" name="idNo" />
+                                <span class="verify_item lig idNo_error_message"></span>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th><i>*</i>身份证照片</th>
+                        <td>
+                            <em class="hint">请务必上传身份证正面，反面 2 张图片</em>
+                            <em class="hint gray">*仅支持 JPG，PNG，格式的图片，文件大小不超过5M。</em>
+                            <div class="identity_list clearboth">
+                                <div class="identity_item clearboth">
+                                    <div class="idetity_img img_room" id="previewFace">
+                                        <span></span>
+                                        <img id="imgheadFace" src=''/>
+                                    </div>
+                                    <span class="imgheadFace_error_message"></span>
+                                    <input type="button" class="identity_btn" onclick='$("._f1").click();' value="上传身份证正面"  />
+                                    <input type="file"  style="display:none;" class="_f1" onchange="previewImage(this,'previewFace','imgheadFace')" id="idImgFace" name="idImgFace"/>
+                                    <span class="img_delete" onclick="delImage('imgheadFace');">删除</span>
+                                </div>
+                                <div class="identity_item clearobth">
+                                    <div class="idetity_img img_room" id="previewBack">
+                                        <span></span>
+                                        <img src="" id="imgheadBack"/>
+                                    </div>
+                                    <span class="imgheadBack_error_message"></span>
+                                    <input type="button" class="identity_btn" onclick='$("._f2").click();' value="上传身份证反面" />
+                                    <input type="file"  style="display:none;" class="_f2" onchange="previewImage(this,'previewBack','imgheadBack')" id="idImgBack" name="idImgBack" />
+                                    <span class="img_delete" onclick="delImage('imgheadBack');">删除</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="big">
+                        <th>邀请码</th>
+                        <td>
+                            <div class="register_itembox">
+                                <input type="text" class="register_txt invitation" id="invitedCode" name="invitedCode" />
+                                <span class="verify_item lig invitedCode_error_message"></span>
+                            </div>
+                        </td>
+
+                    </tr>
+                </table>
+                <div class="deal_box">
+                    <input type="checkbox" class="ck" id="ck1" checked="checked"/>
+                    <label class="ck_lab" for="ck1">我同意<a href="#" target="_blank">《麦粉吧用户注册协议》</a></label>
+                    <span class="ck1_error" style="color: red;"></span>
+                </div>
+                <input type="button" id="submit_button" class="register_btn" value="免费注册" />
+            </div>
+        </div>
+    </div>
+</form>
+<include file="Public:foot" />
+<script >
+    //图片上传预览    IE是用了滤镜。
+    function previewImage(file,previewId,imgheadId)
+    {
+        var MAXWIDTH  = 140;
+        var MAXHEIGHT = 80;
+        var div = document.getElementById(previewId);
+        if (file.files && file.files[0])
+        {
+            div.innerHTML ='<img id='+imgheadId+'>';
+            var img = document.getElementById(imgheadId);
+            img.onload = function(){
+                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                img.width  =  rect.width;
+                img.height =  rect.height;
+                img.style.marginTop = rect.top+'px';
+                var str=$("#"+imgheadId+"").attr('src');
+
+                $('.'+imgheadId+'_error_message').text("ok");
+            }
+            var reader = new FileReader();
+            reader.onload = function(evt){img.src = evt.target.result;}
+            reader.readAsDataURL(file.files[0]);
+        }
+        else //兼容IE
+        {
+            var createRange = null;
+            var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+            file.select();
+            var src = document.selection.createRange().text;
+            div.innerHTML = '<img id='+imgheadId+'>';
+            var img = document.getElementById(imgheadId);
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+            status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+            div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+            $('.'+imgheadId+'_error_message').text("ok");
+        }
+    }
+    function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+        var param = {top:0, left:0, width:width, height:height};
+        if( width>maxWidth || height>maxHeight )
+        {
+            rateWidth = width / maxWidth;
+            rateHeight = height / maxHeight;
+            param.width =  maxWidth;
+            param.height = maxHeight;
+        }
+        param.left = Math.round((maxWidth - param.width) / 2);
+        param.top = Math.round((maxHeight - param.height) / 2);
+        return param;
+    }
+    /*
+     *删除上传图片
+     */
+    function delImage(obj){
+        var src = $("#"+obj+"").attr('src','');
+        $('.'+obj+'_error_message').text("请上传身份证照");
+    }
+</script>
+<script>
+$(function(){
+    /*获取短信息*/
+    $('.get-short-message').click(function(){
+        var phone = $("#register_mobile").val();
+        var data = {"phone":phone};
+        var UserPhone = $.trim($("#register_mobile").val());
+        var errorMessage = null ;
+        var ret = null;
+        if(UserPhone.length == ''){
+            errorMessage = "亲，手机不能为空哦" ;
+            $(".mobile_error_messages").text(errorMessage);
+            ret = false;
+        }else if(!UserPhone.match(/^(13[0,1,2,3,4,5,6,7,8,9]|17[6,7,8]|15[0,1,2,3,4,5,6,7,8,9]|18[0,1,2,3,4,5,6,7,8,9]|14[1,2,3,4,5,6,7,8,9])\d{8}$/)){
+            errorMessage = "亲，手机格式不对哦" ;
+            $(".mobile_error_messages").text(errorMessage);
+            ret = false;
+        }else{
+            $.get('/ajax/getCodeByPhone',data,function(res){
+                if(res==200){
+                    errorMessage = "获取成功,请注意查收。" ;
+                    $(".get_short_message_error").text(errorMessage);
+                }else{
+                    errorMessage = "获取失败,请联系管理员" ;
+                    $(".get_short_message_error").text(errorMessage);
+                }
+            });
+        }
+    });
+});
+/***
+ * 校验地域
+ * */
+
+
+function checkRegional(){
+    var regional = $("#regional option:selected").val();
+    var errorMessage = null ;
+    var ret = null;
+
+    if(regional.length == ''){
+        errorMessage = "亲，请选择地域" ;
+        ret = false;
+    }else{
+        errorMessage = "" ;
+        $(".regional_error_message").addClass('Ok');
+        ret = true;
+    }
+    $(".regional_error_message").text(errorMessage);
+
+
+
+    return ret;
+}
+/*
+ *校验手机号
+ */
+function checkUserPhone(){
+    var UserPhone = $.trim($("#register_mobile").val());
+    var errorMessage = null ;
+    var ret = null;
+    if(UserPhone.length == ''){
+        errorMessage = "亲，手机不能为空哦" ;
+        ret = false;
+    }else if(!UserPhone.match(/^(13[0,1,2,3,4,5,6,7,8,9]|17[6,7,8]|15[0,1,2,3,4,5,6,7,8,9]|18[0,1,2,3,4,5,6,7,8,9]|14[5,7])\d{8}$/)){
+        errorMessage = "亲，手机格式不对哦" ;
+        ret = false;
+    }else{
+
+        var data={"UserPhone":UserPhone};
+        $.ajax({
+            type: "GET",
+            async:false,//默认是true
+            url: "/Ajax/isRegisterAgentPhone",
+            data: data,
+            success:function(data, st){
+                if(data==1){
+                    ret = false;
+                    errorMessage = '已被注册,换一个哦';
+                }else{
+                    errorMessage = '';
+                    ret = true;
+                }
+            }
+        })
+
+
+
+    }
+    $(".mobile_error_messages").text(errorMessage);
+    return ret;
+}
+/***
+ * 校验用户
+ */
+function checkRegisterName(){
+    var agentname = $.trim($("#agentname").val());
+    var errorMessage = null ;
+    var ret = null;
+    if(agentname.length == ''){
+        errorMessage = "亲，用户名不能为空哦" ;
+        ret = false;
+    }else{
+
+        var data={"agentname":agentname};
+        $.ajax({
+            type: "GET",
+            async:false,//默认是true
+            url: "/Ajax/isRegisterAgent",
+            data: data,
+            success:function(data, st){
+                if(data==1){
+                    ret = false;
+                    errorMessage = '已被注册,换一个哦';
+                }else{
+                    errorMessage = '';
+                    ret = true;
+                }
+            }
+        })
+
+    }
+    $(".agentname_error_message").text(errorMessage);
+    return ret;
+}
+//短信验证
+function checkShortMessage(){
+    var result = false;
+    var  errorMessage = null;
+    var ShortMessage = $.trim($("#get_message").val());
+    if(ShortMessage.length == ""){
+        errorMessage = "亲，短信不能为空";
+        result = false;
+    }else if(ShortMessage.length != 6){
+        errorMessage = "亲，短信必须是6位数字" ;
+        result = false;
+    }else{
+        var UserPhone = $.trim($("#register_mobile").val());
+        var data={"ShortMessage":ShortMessage,"UserPhone":UserPhone};
+        $.ajax({
+            type: "GET",
+            async:false,//默认是true
+            url: "/Ajax/identifyCode",
+            data: data,
+            success:function(data, st){
+                if(data==200){
+                    result = true;
+                    errorMessage = '';
+                }else{
+                    errorMessage = "亲，短信已失效，请重新获取" ;
+                    result = false;
+                }
+            }
+        })
+    }
+    $(".get_short_message_error").text(errorMessage);
+    return result;
+}
+/***
+ * 校验用户密码
+ */
+function checkUserPassword(){
+    var UserPassword = $.trim($("#password").val());
+    var errorMessage = null;
+    var ret = null;
+    if(UserPassword.length == ""){
+        errorMessage = "亲，密码不能为空" ;
+        ret = false;
+
+    }else if(UserPassword.length < 6){
+        errorMessage = "亲，密码不能小于六位数" ;
+        ret = false;
+    }else{
+        errorMessage = "" ;
+        ret = true;
+    }
+    $(".password_error").text(errorMessage);
+    return ret;
+}
+/***
+ * 校验微信号
+ */
+function checkWechat(){
+    var wechat= $.trim($("#wechat").val());
+    var errorMessage = null;
+    var ret = null;
+    if(wechat.length == ''){
+        errorMessage = "亲，微信号不能为空" ;
+        ret = false;
+    }else if(!wechat.match(/^[a-zA-Z0-9_]+$/)){
+        errorMessage = "亲，微信号格式不对" ;
+        ret = false;
+    }else{
+        errorMessage = "" ;
+        ret = true;
+    }
+    $(".wechat_error_message").text(errorMessage);
+    return ret;
+}
+/***
+ * 校验微信验证口号
+ */
+function checkWechatSlogan(){
+    var wechatSlogan= $.trim($("#wechatSlogan").val());
+    var errorMessage = null;
+    var ret = null;
+    if(wechatSlogan.length == ''){
+        errorMessage = "亲，微信验证口号不能为空" ;
+        ret = false;
+    }else{
+        errorMessage = "" ;
+        ret = true;
+    }
+    $(".wechatSlogan_error_message").text(errorMessage);
+    return ret;
+}
+/***
+ * 校验真实姓名
+ */
+function checkRealName(){
+    var realname= $.trim($("#realname").val());
+    var errorMessage = null;
+    var ret = null;
+    if(realname.length == ''){
+        errorMessage = "亲，真实姓名不能为空" ;
+        ret = false;
+    }else{
+        errorMessage = "" ;
+        ret = true;
+    }
+    $(".realname_error_message").text(errorMessage);
+    return ret;
+}
+/***
+ * 校验身份证号
+ */
+function checkIdNo(){
+    var idNo= $.trim($("#idNo").val());
+    var errorMessage = null;
+    var ret = null;
+    if(idNo.length == ''){
+        errorMessage = "亲，身份证号不能为空" ;
+        ret = false;
+    }else{
+        errorMessage = "" ;
+        ret = true;
+    }
+    $(".idNo_error_message").text(errorMessage);
+    return ret;
+}
+/***
+ * 校验邀请码
+ */
+function checkInvitedCode(){
+    var invitedCode= $.trim($("#invitedCode").val());
+    var errorMessage = null;
+    var ret = null;
+    if(invitedCode.length == ''){
+        errorMessage = "亲，邀请码不能为空" ;
+        ret = false;
+    }else{
+        var data={"invitedCode":invitedCode};
+        $.ajax({
+            type: "GET",
+            async:false,//默认是true
+            url: "/Ajax/invitedCode",
+            data: data,
+            success:function(data, st){
+                if(data==200){
+                    errorMessage = '';
+                    ret = true;
+                }else{
+                    errorMessage = "亲，邀请码有误" ;
+                    ret = false;
+                }
+            }
+        })
+    }
+    $(".invitedCode_error_message").text(errorMessage);
+    return ret;
+}
+
+function checkAgreement(){
+    var errorMessage = null;
+    var ret = null;
+    if($('#ck1').is(':checked')){
+        errorMessage = '';
+        ret = true;
+    }else{
+        errorMessage = "亲，请接受服务条款";
+        ret = false;
+    }
+    $(".ck1_error").text(errorMessage);
+    return ret;
+}
+
+$("#register_mobile").blur(function(){
+    checkUserPhone();
+});
+$("#agentname").blur(function(){
+    checkRegisterName();
+});
+$('#regional').click(function(){
+    checkRegional();
+})
+$("#get_message").blur(function(){
+    checkShortMessage();
+});
+$("#password").blur(function(){
+    checkUserPassword();
+});
+$("#wechat").blur(function(){
+    checkWechat();
+});
+$("#wechatSlogan").blur(function(){
+    checkWechatSlogan();
+});
+$("#realname").blur(function(){
+    checkRealName();
+});
+$("#idNo").blur(function(){
+    checkIdNo();
+});
+$("#invitedCode").blur(function(){
+    checkInvitedCode();
+});
+$("#submit_button").click(function(){
+    if(checkAgreement()==false){
+        return false;
+    }else if(checkRegisterName() == false){
+        return false;
+    }else if(checkUserPhone() == false){
+        return false;
+    }else if(checkRegional() == false){
+        return false;
+    }else if(checkShortMessage()==false){
+        return false;
+    }else if(checkUserPassword() == false){
+        return false;
+    }else if(checkWechat() == false){
+        return false;
+    }else if(checkWechatSlogan()==false){
+        return false;
+    }else if(checkRealName()==false){
+        return false;
+    }else if(checkIdNo()==false){
+        return false;
+    }else if($("#imgheadFace").attr('src') == ''){
+        var errorMessage = null;
+        errorMessage = '请上传身份证正面照';
+        $(".imgheadFace_error_message").text(errorMessage);
+        return false;
+    }else if($("#imgheadBack").attr('src') == ''){
+        var errorMessage = null;
+        errorMessage = '请上传身份证反面照';
+        $(".imgheadBack_error_message").text(errorMessage);
+        return false;
+    }else if(checkInvitedCode() == false){
+        return false;
+    }else{
+        $("#agent_register").submit();
+    }
+});
+</script>
+<script>
+    $(function () {
+        //控制画面高度
+        if ($(window).height() > 700) {
+            $(".register_container").height($(window).height() - 48 - 78);
+        }
+        $(window).resize(function () {
+            if ($(window).height() > 700) {
+                $(".register_container").height($(window).height() - 48 - 78);
+            }
+        })
+        //验证码
+        $(".code_btn").click(function () {
+            var i = 60;
+            $(this).html(i).addClass("noclick");
+            var set1 = setInterval(function () {
+                i--;
+                if (i > 0) {
+                    $(".code_btn").html(i);
+                } else {
+                    clearInterval(set1);
+                    $(".code_btn").html("再次获取验证码").removeClass("noclick");
+                }
+            }, 1000)
+        })
+    })
+
+</script>

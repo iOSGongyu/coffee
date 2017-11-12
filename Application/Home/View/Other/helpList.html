@@ -1,0 +1,66 @@
+<include file="Public:head" />
+<div class="help_top_bg">
+    <div class="help_top">
+        <a href="#"><img class="logo" src="{$url_ali}images/index/logo.png" /></a>
+        <em><i>></i> <span>帮助中心</span></em>
+    </div>
+</div>
+<div class="help_banner_bg">
+    <div class="help_banner">
+        <img src="{$url_ali}images/about/help_banner.jpg" />
+    </div>
+</div>
+<div class="helplist_box clearboth">
+    <!--四个类型更换不同的ICON 从1到4-->
+    <img class="icon" src="{$url_ali}images/about/help_icon1.jpg" />
+    <strong class="box_title">账号管理</strong>
+    <div class="help_list">
+        <div class="help_room">
+            <div class="help_item">
+                <p>Q：<em>收不到验证码怎么办？</em></p>
+                <p>A：<em>安全拼车小贴士？麦粉吧为什么坚持见麦粉吧物品交易安全宠物买卖你不知道的找工作，拒绝猫腻！不知道的找工作，拒绝猫腻！ </em></p>
+            </div>
+            <div class="help_item">
+                <p>Q：<em>收不到验证码怎么办？</em></p>
+                <p>A：<em>安全拼车小贴士？麦粉吧为什么坚持见麦粉吧物品交易安全宠物买卖你不知道的找工作，拒绝猫腻！吧物品交易安全宠物买卖你不知道的找工作，拒绝猫腻！ </em></p>
+            </div>
+            <div class="help_item">
+                <p>Q：<em>收不到验证码怎么办？</em></p>
+                <p>A：<em>安全拼车小贴士？麦粉吧为什么坚持见麦粉吧物品交易安不知道的找工作，拒绝猫腻！不知道的找工作，拒绝猫腻！不知道的找工作，拒绝猫腻！找工作，拒绝猫腻！不知道的找工作，拒绝猫腻！找工作，拒绝猫腻！不知道的找工作，拒绝猫腻！ </em></p>
+            </div>
+            <div class="help_item">
+                <p>Q：<em>收不到验证码怎么办？</em></p>
+                <p>A：<em>安全拼车小贴士？麦粉吧为什么坚持见麦粉吧物品交易安全宠物买卖你不知道的找工作，拒绝猫腻！ 交易安全宠物买卖你不知道的找工作，拒绝猫腻！ </em></p>
+            </div>
+            <div class="help_item">
+                <p>Q：<em>收不到验证码怎么办？</em></p>
+                <p>A：<em>安全拼车小贴士？麦粉吧为什么坚持见麦粉吧物品交易安全宠物买卖你不知道的找工作，拒绝猫腻！ </em></p>
+            </div>
+            <div class="help_item">
+                <p>Q：<em>收不到验证码怎么办？</em></p>
+                <p>A：<em>安全拼车小贴士？麦粉吧为什么坚持见麦粉吧物品交易安全宠物买卖你不知道的找工作，拒绝猫腻！知道的找工作，拒绝猫腻！ </em></p>
+            </div>
+            <div class="help_item">
+                <p>Q：<em>收不到验证码怎么办？</em></p>
+                <p>A：<em>安全拼车小贴士？麦粉吧为什么坚持见麦粉吧物品交易安全宠物买卖你不知道的找工作，拒绝猫腻！ </em></p>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public:foot" />
+<script>
+    $(function () {
+        //同一行问题相同高度
+        $(".help_item").each(function () {
+            var num = $(this).index();
+            var _this = $(this);
+            if (num % 2 == 0) {
+                if (_this.height() > _this.next(".help_item").height()) {
+                    _this.next(".help_item").height(_this.height());
+                } else {
+                    _this.height(_this.next(".help_item").height());
+                }
+            }
+        })
+    })
+</script>

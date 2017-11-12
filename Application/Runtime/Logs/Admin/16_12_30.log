@@ -1,0 +1,284 @@
+[ 2016-12-30T16:15:58+08:00 ] 127.0.0.1 /Admin/Login/login?user=admin&passwd=admin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' C:\wamp\www\cms2\Application\Admin\Controller\CommonController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `sucai_admin` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `sucai_admin` WHERE `user` = 'admin' AND `passwd` = '0d7aaae371d622793246c719c55f1f7f' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-30T16:16:01+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-30T16:16:06+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-30T16:16:08+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-30T16:16:10+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-30T16:16:16+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-30T16:16:21+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-30T16:17:45+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-30T16:20:49+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-30T16:21:13+08:00 ] 127.0.0.1 /Admin/Ajax/userAdd?user=%E4%BA%8C%E5%BD%93%E5%AE%B6%E7%9A%84&passwd=erdangjiade.com&role=0&roleName=%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%91%98
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sucai_admin` [ RunTime:0.0020s ]
+SQL: INSERT INTO `sucai_admin` (`user`,`passwd`,`role`,`roleName`,`createTime`,`modifyTime`) VALUES ('二当家的','c1fa08488d403e6d15882987c3b6a99d','0','超级管理员','1483086073','1483086073') [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-30T16:21:15+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-30T16:21:25+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-30T16:21:28+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-30T16:21:35+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-30T16:21:39+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-30T16:22:50+08:00 ] 127.0.0.1 /Admin/Learn/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 31 行.
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 32 行.
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 33 行.
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 34 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' C:\wamp\www\cms2\Application\Admin\Controller\CommonController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `sucai_district` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `sucai_category` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sucai_category cat,sucai_district dis WHERE ( cat.id=dis.categoryId ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 1 for Think\Page::show(), called in C:\wamp\www\cms2\Application\Admin\Controller\LearnController.class.php on line 34 and defined C:\wamp\www\cms2\ThinkPHP\Library\Think\Page.class.php 第 76 行.
+SQL: SHOW COLUMNS FROM `sucai_category` [ RunTime:0.0020s ]
+SQL: SELECT cat.CategoryName,cat.id cid,cas.id casid,cas.title,cas.img,cas.detail,cas.createTime,cas.describe FROM sucai_category cat,sucai_case cas WHERE ( cat.id=cas.categoryId ) ORDER BY cid LIMIT 0,10   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: leftSadebarActive C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 365 行.
+NOTIC: [8] Undefined variable: leftUsersManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 372 行.
+NOTIC: [8] Undefined variable: leftUsers C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 379 行.
+NOTIC: [8] Undefined variable: leftAgentUserList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 387 行.
+NOTIC: [8] Undefined variable: commonUserList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 393 行.
+NOTIC: [8] Undefined variable: expand C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 400 行.
+NOTIC: [8] Undefined variable: leftInvitationLists C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 407 行.
+NOTIC: [8] Undefined variable: leftInvitationAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 414 行.
+NOTIC: [8] Undefined variable: leftCategoryManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 429 行.
+NOTIC: [8] Undefined variable: leftCategoryList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 440 行.
+NOTIC: [8] Undefined variable: leftCategoryAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 447 行.
+NOTIC: [8] Undefined variable: leftLearnAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 473 行.
+NOTIC: [8] Undefined variable: leftWechatManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 482 行.
+NOTIC: [8] Undefined variable: leftWechatList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 493 行.
+NOTIC: [8] Undefined variable: leftWechatAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 500 行.
+NOTIC: [8] Undefined variable: leftNewsManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 510 行.
+NOTIC: [8] Undefined variable: leftNews C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 519 行.
+NOTIC: [8] Undefined variable: leftNewsList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 528 行.
+NOTIC: [8] Undefined variable: leftNoticeList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 535 行.
+NOTIC: [8] Undefined variable: leftActivityList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 542 行.
+NOTIC: [8] Undefined variable: leftNewsAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 551 行.
+NOTIC: [8] Undefined variable: leftOrderManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 562 行.
+NOTIC: [8] Undefined variable: leftOrder C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 571 行.
+NOTIC: [8] Undefined variable: leftAdminUserManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 581 行.
+NOTIC: [8] Undefined variable: leftAdminUserList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 590 行.
+NOTIC: [8] Undefined variable: leftAdminUserAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 596 行.
+NOTIC: [8] Undefined variable: leftAdminMessageList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 603 行.
+NOTIC: [8] Undefined variable: leftAdminSeo C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 609 行.
+NOTIC: [8] Undefined variable: leftAdminSeoLists C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 616 行.
+NOTIC: [8] Undefined variable: leftAdminSeoAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 623 行.
+NOTIC: [8] Undefined variable: calendar C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 633 行.
+NOTIC: [8] Undefined index: businessinfo C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 880 行.
+NOTIC: [8] Undefined index: businessinfo C:\wamp\www\cms2\Application\Runtime\Cache\Admin\6edeef64e5eec5b113808389ba76fffd.php 第 880 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-30T16:25:52+08:00 ] 127.0.0.1 /Admin/Ajax/changeRecords?records=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 31 行.
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 32 行.
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 33 行.
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 34 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-30T16:25:52+08:00 ] 127.0.0.1 /Admin/Category/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 31 行.
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 32 行.
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 33 行.
+NOTIC: [8] Undefined variable: lang_sel C:\wamp\www\cms2\Application\Admin\Conf\config.php 第 34 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant LANG_SET - assumed 'LANG_SET' C:\wamp\www\cms2\Application\Admin\Controller\CommonController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `sucai_category` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sucai_category` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 1 for Think\Page::show(), called in C:\wamp\www\cms2\Application\Admin\Controller\CategoryController.class.php on line 32 and defined C:\wamp\www\cms2\ThinkPHP\Library\Think\Page.class.php 第 76 行.
+NOTIC: [8] Undefined variable: url_replace C:\wamp\www\cms2\ThinkPHP\Library\Think\Page.class.php 第 82 行.
+SQL: SELECT `id`,`CategoryName`,`IsShowNav`,`isCase`,`time` FROM `sucai_category` LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: leftSadebarActive C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 364 行.
+NOTIC: [8] Undefined variable: leftUsersManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 371 行.
+NOTIC: [8] Undefined variable: leftUsers C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 378 行.
+NOTIC: [8] Undefined variable: leftAgentUserList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 386 行.
+NOTIC: [8] Undefined variable: commonUserList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 392 行.
+NOTIC: [8] Undefined variable: expand C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 399 行.
+NOTIC: [8] Undefined variable: leftInvitationLists C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 406 行.
+NOTIC: [8] Undefined variable: leftInvitationAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 413 行.
+NOTIC: [8] Undefined variable: leftCategoryAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 446 行.
+NOTIC: [8] Undefined variable: leftLearnManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 455 行.
+NOTIC: [8] Undefined variable: leftLearnManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 456 行.
+NOTIC: [8] Undefined variable: leftLearnList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 465 行.
+NOTIC: [8] Undefined variable: leftLearnAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 472 行.
+NOTIC: [8] Undefined variable: leftWechatManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 481 行.
+NOTIC: [8] Undefined variable: leftWechatList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 492 行.
+NOTIC: [8] Undefined variable: leftWechatAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 499 行.
+NOTIC: [8] Undefined variable: leftNewsManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 509 行.
+NOTIC: [8] Undefined variable: leftNews C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 518 行.
+NOTIC: [8] Undefined variable: leftNewsList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 527 行.
+NOTIC: [8] Undefined variable: leftNoticeList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 534 行.
+NOTIC: [8] Undefined variable: leftActivityList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 541 行.
+NOTIC: [8] Undefined variable: leftNewsAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 550 行.
+NOTIC: [8] Undefined variable: leftOrderManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 561 行.
+NOTIC: [8] Undefined variable: leftOrder C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 570 行.
+NOTIC: [8] Undefined variable: leftAdminUserManager C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 580 行.
+NOTIC: [8] Undefined variable: leftAdminUserList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 589 行.
+NOTIC: [8] Undefined variable: leftAdminUserAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 595 行.
+NOTIC: [8] Undefined variable: leftAdminMessageList C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 602 行.
+NOTIC: [8] Undefined variable: leftAdminSeo C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 608 行.
+NOTIC: [8] Undefined variable: leftAdminSeoLists C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 615 行.
+NOTIC: [8] Undefined variable: leftAdminSeoAdd C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 622 行.
+NOTIC: [8] Undefined variable: calendar C:\wamp\www\cms2\Application\Runtime\Cache\Admin\d29a4a94fe22777b3a826e657e5bb29a.php 第 632 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
